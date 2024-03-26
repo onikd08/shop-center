@@ -23,7 +23,7 @@ export default function ProductImageContainer({ images }) {
             height={100}
             width={100}
             src={image}
-            className="mx-auto border object-cover h-[100px] w-[100px]"
+            className="mx-auto border object-cover h-[100px] w-[100px] cursor-pointer"
             alt={`Product Image-${idx}`}
           />
         ))}

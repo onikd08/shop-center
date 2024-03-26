@@ -1,7 +1,8 @@
-import { promises as fs } from "fs";
+import fs from "fs";
 
-export async function getAllProducts() {
-  const jsonProducts = await fs.readFile(
+export function getAllProducts() {
+  console.log(process.cwd() + "/app/products.json");
+  const jsonProducts = fs.readFileSync(
     process.cwd() + "/app/products.json",
     "utf8"
   );

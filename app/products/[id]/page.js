@@ -2,9 +2,9 @@ import ProductContentContainer from "@/components/ProductContentContainer";
 import ProductImageContainer from "@/components/ProductImageContainer";
 import { getAllProducts } from "@/utils/shop.utils";
 
-export default async function ProductDetailsPage({ params }) {
+export default function ProductDetailsPage({ params }) {
   const { id } = params;
-  const allProducts = await getAllProducts();
+  const allProducts = getAllProducts();
   const matchedProduct = allProducts.find(
     (product) => product.id === parseInt(id)
   );

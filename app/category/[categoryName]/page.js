@@ -5,10 +5,10 @@ import Footer from "@/components/Footer";
 import Subscribe from "@/components/Subscribe";
 import { getAllProducts } from "@/utils/shop.utils";
 
-export default async function CategoryPage({ params }) {
+export default function CategoryPage({ params }) {
   const { categoryName } = params;
 
-  const allProducts = await getAllProducts();
+  const allProducts = getAllProducts();
   const findMatchedProducts = () => {
     if (categoryName === "all") {
       return allProducts;

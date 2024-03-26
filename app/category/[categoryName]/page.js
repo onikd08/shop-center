@@ -10,7 +10,7 @@ export default async function CategoryPage({ params }) {
 
   const allProducts = await getAllProducts();
   const findMatchedProducts = () => {
-    if (categoryName === "allProducts") {
+    if (categoryName === "all") {
       return allProducts;
     } else {
       const matchedProducts = allProducts.filter(

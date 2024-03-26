@@ -6,7 +6,7 @@ export default function CustomLink({ children, path }) {
   const pathName = usePathname();
   const isActive = pathName === path;
   return (
-    <Link className={isActive ? "text-[#ffd160]" : ""} href={path}>
+    <Link className={`capitalize ${isActive && "text-[#ffd160]"}`} href={path}>
       {children}
     </Link>
   );

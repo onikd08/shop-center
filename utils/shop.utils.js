@@ -2,7 +2,7 @@ import { promises as fs } from "fs";
 
 export async function getAllProducts() {
   const jsonProducts = await fs.readFile(
-    process.cwd() + "/public/products.json",
+    process.cwd() + "/app/products.json",
     "utf8"
   );
 
